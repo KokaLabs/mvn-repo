@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata modelVersion="1.1.0">
   <groupId>kokalabs</groupId>
-  <artifactId>koka-corporate-dependencies</artifactId>
+  <artifactId>koka-corporate</artifactId>
   <version>0.0.0-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20140120.191647</timestamp>
-      <buildNumber>4</buildNumber>
+      <timestamp>20140120.200624</timestamp>
+      <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20140120191647</lastUpdated>
+    <lastUpdated>20140120200624</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>0.0.0-20140120.191647-4</value>
-        <updated>20140120191647</updated>
+        <value>0.0.0-20140120.200624-1</value>
+        <updated>20140120200624</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
