@@ -85,7 +85,7 @@
                                  (imports koka:koka-corporate-dependencies)
           pom.xml                (parent koka:koka-corporate)
 
-      With this setup, you standarize properties/plugin versions and have common
+      With this setup, you standardize properties/plugin versions and have common
       dependency versions for everything except the bom.
 
     VOCABULARY:
@@ -96,9 +96,9 @@
 
   <distributionManagement>
     <repository>
-        <id>internal.repo</id>
-        <name>Temporary Staging Repository</name>
-        <url>file://${built.repo.dir}</url>
+      <id>internal.repo</id>
+      <name>Temporary Staging Repository</name>
+      <url>file://${built.repo.dir}</url>
     </repository>
   </distributionManagement>
 
@@ -500,7 +500,9 @@
             <groupId>com.github.github</groupId>
             <artifactId>site-maven-plugin</artifactId>
             <configuration>
-              <message>Maven artifacts for ${project.groupId}:${project.artifactId}:${project.version} ~${maven.build.timestamp}</message>
+              <message>Deploy ${project.artifactId} v${project.version}
+
+${project.groupId}:${project.artifactId}:${project.version} ~${maven.build.timestamp}</message>
               <noJekyll>true</noJekyll>
               <outputDirectory>${built.repo.dir}</outputDirectory>
               <includes>
@@ -510,6 +512,8 @@
               <repositoryName>mvn-repo</repositoryName>
               <branch>refs/heads/master</branch>
               <path>maven/snapshots</path>
+              <merge>true</merge>
+              <oauth2Token>${env.GITHUB_TOKEN}</oauth2Token>
             </configuration>
             <executions>
               <execution>
